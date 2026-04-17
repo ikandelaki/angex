@@ -1,0 +1,32 @@
+<div class="message-history-container">
+  <div class="message-header">
+    <div class="header-user-info">
+      <div class="header-avatar">👩</div>
+      <div>
+        <h3>Alice Johnson</h3>
+        <p class="header-status">Online</p>
+      </div>
+    </div>
+    <div class="header-actions">
+      <button aria-label="Call">☎️</button>
+      <button aria-label="Video">📹</button>
+      <button aria-label="More options">⋮</button>
+    </div>
+  </div>
+
+  <div class="messages-area">
+    @for (message of messages; track message.id) {
+      <div class="message-group" [class.own]="message.isOwn">
+        <div class="message" [class.own]="message.isOwn">
+          <p>{{ message.content }}</p>
+          <span class="message-time">{{ formatTime(message.timestamp) }}</span>
+        </div>
+      </div>
+    }
+  </div>
+
+  <div class="message-input-area">
+    <textarea placeholder="Type your message..." rows="1"></textarea>
+    <button class="send-btn" aria-label="Send message">Send</button>
+  </div>
+</div>

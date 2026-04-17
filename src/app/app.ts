@@ -1,10 +1,10 @@
-import { Component, signal } from '@angular/core';
+import { Component } from '@angular/core';
+import { MessagingLayout } from './messaging-layout/messaging-layout';
 import { RouterOutlet } from '@angular/router';
-import { Header } from '../header/header';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Header],
+  imports: [RouterOutlet, MessagingLayout],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
