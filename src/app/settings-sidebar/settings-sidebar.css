@@ -26,16 +26,6 @@
   color: #ecf0f1;
 }
 
-.sidebar-btn:hover {
-  background-color: #34495e;
-  transform: scale(1.1);
-}
-
-.sidebar-btn:active {
-  background-color: #1a252f;
-  transform: scale(0.95);
-}
-
 .sidebar-divider {
   width: 28px;
   height: 1px;
@@ -60,7 +50,7 @@
 .sidebar-btn::after {
   content: attr(title);
   position: absolute;
-  left: 60px;
+  right: 60px;
   background-color: #333;
   color: white;
   padding: 6px 12px;
